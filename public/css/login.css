@@ -5,7 +5,7 @@
     scroll-behavior: smooth;
 }
 body{
-    background-image: url(./img/Proyecto\ nuevo-3.jpg);
+    background-image: url(./img/cloud\ web-2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     transition: 3s;
@@ -84,4 +84,15 @@ p:hover{
 }
 #forgot{
     margin-left: 100px;
+}
+#png{
+    position: absolute;
+    top: 25%;
+    right: 38%;
+    transition: filter 0.3s ease;
+    width: 27%;
+    transition: transform 0.6s ease;
+}
+#png:hover{
+    transform: translate(5%, -5%);
 }
