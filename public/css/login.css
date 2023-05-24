@@ -79,16 +79,17 @@ h1{
     justify-content: center;
     align-items: center;
 }
-p{
+a{
     margin: 35px;
     font-size: 15px;
     cursor: pointer;
     transition: 1s;
     position: relative;
     display: inline-block;
-    
+    text-decoration: none;
+    color: white;
 }
-p::after {
+a::after {
     content: "";
     position: absolute;
     left: 0;
@@ -98,7 +99,7 @@ p::after {
     background-color: white;
     transition: width 0.3s ease;
 }
-p:hover::after {
+a:hover::after {
     width: 100%;
 }
 #forgot{
