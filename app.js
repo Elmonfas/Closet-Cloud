@@ -19,6 +19,8 @@ app.use('/',require('./routes/login.js'))
 
 app.use('/main',require('./routes/index.js'))
 
+app.use('/sign-up',require('./routes/sign-up.js'))
+
 app.listen(3000,(req,res)=>{
     console.log('SERVER RUNNING IN PORT:https://localhost:3000');
 })
