@@ -35,14 +35,14 @@ form {
   box-shadow: 2px 2px 20px white;
 }
 label{
+    width: 7cm;
     text-align: start;
-    font-size: 25px;
-    margin: 5px;
+    font-size: 20px;
 }
 button{
     width: 3.5cm; 
     font-size: 15px;
-    margin: 20px;
+    margin-top: 30px;
     padding: 0.5rem;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.1);
@@ -50,6 +50,7 @@ button{
     color: white;
     cursor: pointer;
     transition: 0.5s;
+    
 
 }
 button:hover{
@@ -60,16 +61,17 @@ button:hover{
 input{
     font-size: 13px;
     padding: 6px;
-    width: 3cm;
+    width: 7cm;
     background-color: rgba(255, 255, 255, 0.5);
     color: #4F4B5C;
     border: 2px solid white;
     height: 15px;
 }
-h1{
+#sing-up{ 
     position: absolute;
-    top: 24%;
+    top: 11%;
 }
+
 #extra{
     margin-top: 20px;
     height: 1cm;
@@ -107,7 +109,7 @@ p:hover::after {
 #png{
     position: absolute;
     top: 25%;
-    right: 41%;
+    right: 39%;
     transition: filter 0.3s ease;
     width: 27%;
     transition: transform 0.6s ease;
