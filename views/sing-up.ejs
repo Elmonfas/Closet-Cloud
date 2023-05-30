@@ -16,19 +16,19 @@
         <form method="post" action="sign-up">
           <h1 id="sing-up">SING-UP</h1>
           <label for="username">Name</label>
-          <input type="text" id="username" name="username" placeholder="write here...">
+          <input type="text" id="name" name="name" placeholder="write here...">
 
           <label for="username">Surnames</label>
-          <input type="text" id="username" name="username" placeholder="write here...">
+          <input type="text" id="username" name="surname" placeholder="write here...">
 
           <label for="username">Email</label>
-          <input type="text" id="username" name="username" placeholder="write here...">
+          <input type="email" id="email" name="email" placeholder="write here...">
         
           <label for="password">Password</label>
           <input type="password" id="password" name="password">
 
           <label for="password">Repeat Password</label>
-          <input type="password" id="password" name="password">
+          <input type="password" id="verifyPassword" name="verifyPassword">
         
           <button type="submit">sing-up</button>
           
@@ -41,5 +41,20 @@
       </div>
     </div>
     <img id="png" src="resource/css/img/logoCC.png" alt="">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <%if(typeof alert != "undefined"){ %>
+        <script>
+            Swal.fire({
+                title:'<%= alertTitle%>',
+                text:'<%= alertMessage%>',
+                icon:'<%= alertIcon%>',
+                showConfirmButton:<%= showConfirmButton%>,
+                timer:<%= time%>
+            }).then(()=>{
+                window.location='/<%= ruta%>'
+            })
+        </script>
+    <% } %>
   </body>
+
 </html>
