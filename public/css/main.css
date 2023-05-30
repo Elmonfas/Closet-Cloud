@@ -81,3 +81,10 @@ img:hover{
 #title:hover{
     transform: scale(1.1);
 }
+#png{
+    position:absolute;
+    top: 1.5%;
+    width: 50px;
+    left: 2%;
+    border-radius: 50px;
+}
