@@ -9,12 +9,12 @@ router.get('/',(req,res)=>{
 
 router.post('/',(req,res)=>{
     const name = req.body.name
-    const surname = req.body.surname
+    const nickname = req.body.nickname
     const email = req.body.email
     const password = req.body.password
     const verifyPassword = req.body.verifyPassword
 
-    if(name == '' | surname == '' | email == '' | password == '' | verifyPassword == ''){   
+    if(name == '' | nickname == '' | email == '' | password == '' | verifyPassword == ''){   
         res.render('sing-up',{
             alert:true,
             alertTitle:"Formulario no completado",
@@ -35,7 +35,7 @@ router.post('/',(req,res)=>{
             ruta:'sign-up'
         }) 
     }else{
-        pool.query('insert into users set ?',{user_name:name,user_email:email,user_pass:password},(error,response)=>{
+        pool.query('insert into users set ?',{user_name:name,user_nickname:nickname,user_email:email,user_pass:password},(error,response)=>{
             if(error){
                 console.log(error);
                 res.render('sing-up',{
