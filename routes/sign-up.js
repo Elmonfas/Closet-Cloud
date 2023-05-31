@@ -4,7 +4,13 @@ const router = express.Router()
 const pool = require('../database/db')
 
 router.get('/',(req,res)=>{
-    res.render('sing-up')
+    if(req.session.loggead){
+        console.log(req.session.loggead);
+        res.redirect('main')
+    }else{
+        console.log(req.session.loggead);
+        res.render('sing-up')
+    }
 })
 
 router.post('/',(req,res)=>{
