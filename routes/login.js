@@ -3,7 +3,13 @@ const pool = require('../database/db')
 const router = express.Router()
 
 router.get('/',(req,res)=>{
-    res.render('login')
+    if(req.session.loggead == true){
+        console.log(req.session.loggead);
+        res.redirect('main')
+    }else{
+        console.log(req.session.loggead);
+        res.render('login')
+    }
 })
 
 
@@ -43,7 +49,10 @@ router.post('/',(req,res)=>{
                     time:1500,
                     ruta:'/'
                 })
-            }else{  
+            }else{
+                req.session.loggead = true
+                req.session.name = response[0].id_user
+                console.log(req.session.name);
                 res.redirect('main')
             }
         })
