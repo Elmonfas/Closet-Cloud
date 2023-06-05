@@ -5,7 +5,7 @@ router.get('/',(req,res)=>{
     if(req.session.loggead != true){
         res.redirect('/')
     }else{
-        res.render('index')
+        res.render('index',{name:req.session.user})
     }
 })
 

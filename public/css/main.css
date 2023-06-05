@@ -19,6 +19,14 @@ body{
     flex-direction: row;
     justify-content: end;
 }
+
+#usuario{
+    position: absolute;
+    left: 70px;
+    top: 5px;
+}
+
+
 h2{
     margin: 0.5cm;
     font-size: 25px;

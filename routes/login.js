@@ -28,7 +28,7 @@ router.post('/',(req,res)=>{
             ruta:'/'
         })
     }else{
-        pool.query(`select id_user from users where user_nickname = ? and user_pass = ?`,[nickname,password],(error,response)=>{
+        pool.query(`select id_user,user_name from users where user_nickname = ? and user_pass = ?`,[nickname,password],(error,response)=>{
             if(error){
                 res.render('login',{
                     alert:true,
@@ -52,6 +52,7 @@ router.post('/',(req,res)=>{
             }else{
                 req.session.loggead = true
                 req.session.name = response[0].id_user
+                req.session.user = response[0].user_name
                 console.log(req.session.name);
                 res.redirect('main')
             }
